@@ -15,6 +15,7 @@ class OnBoarding extends StatelessWidget {
         child: Stack(
           children: [
             PageView(
+              scrollDirection: Axis.horizontal,
               children: const [
                 OnBoardingPage(
                   title: MyTexts.onBoardingTitle1,
