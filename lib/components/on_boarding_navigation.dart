@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:single_store_ecommerce/controllers/on_boarding_controller.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/helpers/helpers.dart';
@@ -10,6 +11,8 @@ class OnBoardingNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final OnBoardingController controller = OnBoardingController.instance;
+
     return Positioned(
       width: MyHelpers.screenWidth(),
       bottom: MySizes.defaultSpace,
@@ -19,15 +22,18 @@ class OnBoardingNavigation extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SmoothPageIndicator(
-              controller: PageController(),
+              controller: controller.pageController,
               count: 3,
+              onDotClicked: controller.dotNavigate,
               effect: const ExpandingDotsEffect(
                 dotHeight: 6,
                 activeDotColor: MyColors.primary,
               ),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                controller.nextPage();
+              },
               style: ElevatedButton.styleFrom(shape: const CircleBorder()),
               child: const Icon(
                 FontAwesomeIcons.angleRight,
