@@ -16,7 +16,7 @@ class OnBoardingController {
 // Skip page
   skipPage() {
     if (currentPageIdx.value == 2) {
-      Get.offAll(const Login());
+      Get.offAll(() => const Login());
     }
 
     currentPageIdx.value = 2;
@@ -25,11 +25,12 @@ class OnBoardingController {
 
 // Next Page
   nextPage() {
-    currentPageIdx.value++;
-
     if (currentPageIdx.value == 2) {
-      Get.offAll(const Login());
+      Get.offAll(() => const Login());
+      return;
     }
+
+    currentPageIdx.value++;
 
     _jump();
   }

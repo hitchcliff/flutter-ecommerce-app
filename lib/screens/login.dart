@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:single_store_ecommerce/components/login_footer.dart';
+import 'package:single_store_ecommerce/components/signin_with.dart';
 import 'package:single_store_ecommerce/components/login_form.dart';
 import 'package:single_store_ecommerce/components/login_header.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
@@ -28,7 +28,7 @@ class Login extends StatelessWidget {
               children: [
                 const LoginHeader(),
                 const LoginForm(),
-                const LoginFooter(),
+                const SigninWith(),
               ].gap(height: MySizes.spaceBtwSections),
             ),
           ),

@@ -5,8 +5,8 @@ import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
 
-class LoginFooter extends StatelessWidget {
-  const LoginFooter({super.key});
+class SigninWith extends StatelessWidget {
+  const SigninWith({super.key});
 
   @override
   Widget build(BuildContext context) {

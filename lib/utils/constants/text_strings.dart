@@ -24,4 +24,14 @@ class MyTexts {
   static const String loginSignIn = "Sign In";
   static const String loginSignUp = "Create Account";
   static const String loginDivider = "Or Sign in With";
+
+  // Signup Texts
+  static const String registerTitle = "First Name";
+  static const String registerFirstName = "First Name";
+  static const String registerLastName = "Last Name";
+  static const String registerUsername = "Username";
+  static const String registerEmail = "E-mail";
+  static const String registerPhoneNumber = "Phone Number";
+  static const String registerPassword = "Password";
+  static const String registerCreateAccount = "Create Account";
 }
