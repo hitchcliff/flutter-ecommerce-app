@@ -13,6 +13,8 @@ class OnBoardingNavigation extends StatelessWidget {
   Widget build(BuildContext context) {
     final OnBoardingController controller = OnBoardingController.instance;
 
+    final bool isDark = MyHelpers.isDarkMode(context);
+
     return Positioned(
       width: MyHelpers.screenWidth(),
       bottom: MySizes.defaultSpace,
@@ -21,13 +23,15 @@ class OnBoardingNavigation extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SmoothPageIndicator(
-              controller: controller.pageController,
-              count: 3,
-              onDotClicked: controller.dotNavigate,
-              effect: const ExpandingDotsEffect(
-                dotHeight: 6,
-                activeDotColor: MyColors.primary,
+            Builder(
+              builder: (context) => SmoothPageIndicator(
+                controller: controller.pageController,
+                count: 3,
+                onDotClicked: controller.dotNavigate,
+                effect: ExpandingDotsEffect(
+                  dotHeight: 6,
+                  activeDotColor: isDark ? MyColors.light : MyColors.dark,
+                ),
               ),
             ),
             ElevatedButton(

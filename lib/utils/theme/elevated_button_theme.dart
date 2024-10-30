@@ -12,7 +12,9 @@ class MyElevatedButtonTheme {
       side: const BorderSide(color: MyColors.primary),
       padding: const EdgeInsets.symmetric(vertical: MySizes.buttonHeight),
       textStyle: const TextStyle(
-          fontSize: 16, color: MyColors.white, fontWeight: FontWeight.w600),
+          fontSize: MySizes.fontSizeMd,
+          color: MyColors.white,
+          fontWeight: FontWeight.w600),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(MySizes.buttonRadius),
       ),

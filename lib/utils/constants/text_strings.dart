@@ -1,7 +1,7 @@
 class MyTexts {
   static const appName = "E-commerce Store";
 
-  // -- OnBoarding Texts
+  // OnBoarding Texts
   static const String onBoardingTitle1 = "Choose your product";
   static const String onBoardingTitle2 = "Select Payment Method";
   static const String onBoardingTitle3 = "Deliver at your door step";
@@ -12,4 +12,16 @@ class MyTexts {
       "For Seamless Transactions, Choose Your Payment Path - Your Convenience, Our Priority!";
   static const String onBoardingSubTitle3 =
       "From Our Doorstep to Yours - Swift, Secure, and Contactless Delivery!";
+
+  // Login Texts
+  static const String loginTitle = "Welcome back,";
+  static const String loginSubTitle =
+      "Discover Limitless Choices and  Unmatched Convenience.";
+  static const String loginPlaceholderEmail = "E-mail";
+  static const String loginPlaceholderPw = "Password";
+  static const String loginRememberMe = "Remember Me";
+  static const String loginForgotPw = "Forgot Password?";
+  static const String loginSignIn = "Sign In";
+  static const String loginSignUp = "Create Account";
+  static const String loginDivider = "Or Sign in With";
 }

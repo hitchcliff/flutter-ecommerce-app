@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:single_store_ecommerce/screens/login.dart';
 
 class OnBoardingController {
   final PageController pageController = PageController();
@@ -14,14 +15,21 @@ class OnBoardingController {
 
 // Skip page
   skipPage() {
-    currentPageIdx.value = 2;
+    if (currentPageIdx.value == 2) {
+      Get.offAll(const Login());
+    }
 
+    currentPageIdx.value = 2;
     _jump();
   }
 
 // Next Page
   nextPage() {
     currentPageIdx.value++;
+
+    if (currentPageIdx.value == 2) {
+      Get.offAll(const Login());
+    }
 
     _jump();
   }
