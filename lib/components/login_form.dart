@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
+import 'package:single_store_ecommerce/screens/create_account.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
 
@@ -12,12 +14,15 @@ class LoginForm extends StatelessWidget {
     return Form(
       child: Column(
         children: [
+          // email field
           TextFormField(
             decoration: const InputDecoration(
               prefixIcon: Icon(FontAwesomeIcons.envelope),
               labelText: MyTexts.loginPlaceholderEmail,
             ),
           ),
+
+          // password field
           TextFormField(
             obscureText: true,
             decoration: const InputDecoration(
@@ -26,6 +31,8 @@ class LoginForm extends StatelessWidget {
               suffixIcon: Icon(FontAwesomeIcons.eyeSlash),
             ),
           ),
+
+          // remember me & forgot password
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -41,6 +48,8 @@ class LoginForm extends StatelessWidget {
               ),
             ],
           ),
+
+          // sign in btn
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
@@ -48,10 +57,15 @@ class LoginForm extends StatelessWidget {
               child: const Text(MyTexts.loginSignIn),
             ),
           ),
+
+          // create account btn
           SizedBox(
             width: double.infinity,
             child: OutlinedButton(
-                onPressed: () {}, child: const Text(MyTexts.loginSignUp)),
+                onPressed: () {
+                  Get.to(const CreateAccount());
+                },
+                child: const Text(MyTexts.loginSignUp)),
           ),
         ].gap(height: MySizes.spaceBtwItems),
       ),
