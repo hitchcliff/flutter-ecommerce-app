@@ -26,7 +26,7 @@ class MyTexts {
   static const String loginDivider = "Or Sign in With";
 
   // Signup Texts
-  static const String registerTitle = "First Name";
+  static const String registerTitle = "Let's create your account";
   static const String registerFirstName = "First Name";
   static const String registerLastName = "Last Name";
   static const String registerUsername = "Username";

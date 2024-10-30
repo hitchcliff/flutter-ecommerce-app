@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:single_store_ecommerce/components/signin_with.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
+import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
 
@@ -9,6 +11,8 @@ class RegisterForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return Form(
       child: Column(
         children: [
@@ -36,6 +40,64 @@ class RegisterForm extends StatelessWidget {
             decoration: const InputDecoration(
               prefixIcon: Icon(FontAwesomeIcons.userCheck),
               labelText: MyTexts.registerUsername,
+            ),
+          ),
+          TextFormField(
+            decoration: const InputDecoration(
+              prefixIcon: Icon(FontAwesomeIcons.envelope),
+              labelText: MyTexts.registerEmail,
+            ),
+          ),
+          TextFormField(
+            decoration: const InputDecoration(
+              prefixIcon: Icon(FontAwesomeIcons.phone),
+              labelText: MyTexts.registerPhoneNumber,
+            ),
+          ),
+          TextFormField(
+            decoration: const InputDecoration(
+              prefixIcon: Icon(FontAwesomeIcons.lock),
+              labelText: MyTexts.registerPassword,
+            ),
+          ),
+          Row(
+            children: [
+              SizedBox(
+                  width: 24,
+                  height: 24,
+                  child: Checkbox(value: true, onChanged: (value) {})),
+              Text.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(
+                        text: "I agree to ", style: theme.textTheme.bodySmall),
+                    TextSpan(
+                      text: "Privacy Policy ",
+                      style: theme.textTheme.bodyMedium!.apply(
+                        decoration: TextDecoration.underline,
+                        color: MyColors.primary,
+                        decorationColor: MyColors.primary,
+                      ),
+                    ),
+                    TextSpan(text: "and ", style: theme.textTheme.bodySmall),
+                    TextSpan(
+                      text: "Terms of use",
+                      style: theme.textTheme.bodyMedium!.apply(
+                        decoration: TextDecoration.underline,
+                        color: MyColors.primary,
+                        decorationColor: MyColors.primary,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: () {},
+              child: const Text(MyTexts.registerCreateAccount),
             ),
           ),
         ].gap(height: MySizes.spaceBtwItems),
