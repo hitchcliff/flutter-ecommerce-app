@@ -15,4 +15,8 @@ class MyImages {
 
   static const String googleIconImg = "assets/logos/google-icon.png";
   static const String fbIconImg = "assets/logos/facebook-icon.png";
+
+  // verify image
+  static const verifyEmailImg =
+      "assets/images/animations/sammy-line-man-receives-a-mail.png";
 }

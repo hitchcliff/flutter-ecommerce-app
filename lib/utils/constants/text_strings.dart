@@ -34,4 +34,12 @@ class MyTexts {
   static const String registerPhoneNumber = "Phone Number";
   static const String registerPassword = "Password";
   static const String registerCreateAccount = "Create Account";
+
+  // Verify account
+  static const verifyTitle = "Verify your email address!";
+  static const verifyEmail = "support@email.com";
+  static const verifyDescription =
+      "Congratulations, your account awaits. Verify your email to start shopping and experience a Worlds unrivaled deals and Personalized offers.";
+  static const verifyContinueBtn = "Continue";
+  static const verifyResendBtn = "Resend Email";
 }
