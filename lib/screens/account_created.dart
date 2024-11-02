@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:single_store_ecommerce/components/close_app_bar.dart';
 import 'package:single_store_ecommerce/components/fullscreen_container.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/screens/login.dart';
@@ -15,19 +16,24 @@ class AccountCreated extends StatelessWidget {
     final theme = Theme.of(context);
 
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        actions: closeAppBar,
+      ),
       body: SafeArea(
         child: FullscreenContainer(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const Image(
                 image: AssetImage(MyImages.accountCreatedImg),
                 height: 200,
               ),
-              Text(MyTexts.accountCreatedTitle,
-                  style: theme.textTheme.headlineMedium),
+              Text(
+                MyTexts.accountCreatedTitle,
+                style: theme.textTheme.headlineMedium,
+                textAlign: TextAlign.center,
+              ),
               Text(
                 MyTexts.accountCreatedDescription,
                 style: theme.textTheme.bodyMedium,
