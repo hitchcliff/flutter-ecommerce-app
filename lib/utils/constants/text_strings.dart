@@ -41,5 +41,11 @@ class MyTexts {
   static const verifyDescription =
       "Congratulations, your account awaits. Verify your email to start shopping and experience a Worlds unrivaled deals and Personalized offers.";
   static const verifyContinueBtn = "Continue";
-  static const verifyResendBtn = "Resend Email";
+  static const verifyResendBtn = "Contnue";
+
+  // Account created
+  static const accountCreatedTitle = "Your account successfully created!";
+  static const accountCreatedDescription =
+      "Welcome to your ultimate shopping destination. Your account is created, unleash the job of seamless online shoppings.";
+  static const accountCreatedBtn = "Continue";
 }

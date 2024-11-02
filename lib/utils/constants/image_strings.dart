@@ -19,4 +19,8 @@ class MyImages {
   // verify image
   static const verifyEmailImg =
       "assets/images/animations/sammy-line-man-receives-a-mail.png";
+
+  // account created
+  static const accountCreatedImg =
+      "assets/images/animations/sammy-line-success.png";
 }
