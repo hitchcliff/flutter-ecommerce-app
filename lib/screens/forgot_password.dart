@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:single_store_ecommerce/components/fullscreen_container.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
-import 'package:single_store_ecommerce/utils/constants/image_strings.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
 
@@ -18,34 +18,41 @@ class ForgotPassword extends StatelessWidget {
         child: FullscreenContainer(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Image(
-                image: AssetImage(MyImages.verifyEmailImg),
-                height: 200,
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    MyTexts.forgotPasswordTitle,
+                    style: theme.textTheme.headlineMedium,
+                  ),
+                  Text(
+                    MyTexts.forgotPasswordDescription,
+                    style: theme.textTheme.bodyMedium,
+                  ),
+                ].gap(height: MySizes.spaceBtwItems),
               ),
-              Text(MyTexts.verifyTitle, style: theme.textTheme.headlineMedium),
-              Text(MyTexts.verifyEmail, style: theme.textTheme.bodyLarge),
-              Text(
-                MyTexts.verifyDescription,
-                style: theme.textTheme.bodyMedium,
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: const Text(MyTexts.verifyContinueBtn),
+              Form(
+                child: Column(
+                  children: [
+                    TextFormField(
+                      decoration: const InputDecoration(
+                        prefixIcon: Icon(FontAwesomeIcons.envelope),
+                        labelText: MyTexts.forgotPasswordPlaceholder,
+                      ),
+                    ),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: const Text(MyTexts.verifyContinueBtn),
+                      ),
+                    ),
+                  ].gap(height: MySizes.spaceBtwItems),
                 ),
-              ),
-              SizedBox(
-                width: double.infinity,
-                child: TextButton(
-                  onPressed: () {},
-                  child: const Text(MyTexts.verifyResendBtn),
-                ),
-              ),
-            ].gap(height: MySizes.spaceBtwItems),
+              )
+            ].gap(height: MySizes.spaceBtwSections),
           ),
         ),
       ),

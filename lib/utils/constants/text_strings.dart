@@ -36,16 +36,24 @@ class MyTexts {
   static const String registerCreateAccount = "Create Account";
 
   // Verify account
-  static const verifyTitle = "Verify your email address!";
-  static const verifyEmail = "support@email.com";
-  static const verifyDescription =
+  static const String verifyTitle = "Verify your email address!";
+  static const String verifyEmail = "support@email.com";
+  static const String verifyDescription =
       "Congratulations, your account awaits. Verify your email to start shopping and experience a Worlds unrivaled deals and Personalized offers.";
-  static const verifyContinueBtn = "Continue";
-  static const verifyResendBtn = "Contnue";
+  static const String verifyContinueBtn = "Continue";
+  static const String verifyResendBtn = "Re-send";
 
   // Account created
-  static const accountCreatedTitle = "Your account successfully created!";
-  static const accountCreatedDescription =
+  static const String accountCreatedTitle =
+      "Your account successfully created!";
+  static const String accountCreatedDescription =
       "Welcome to your ultimate shopping destination. Your account is created, unleash the job of seamless online shoppings.";
-  static const accountCreatedBtn = "Continue";
+  static const String accountCreatedBtn = "Continue";
+
+  // Forgot password
+  static const String forgotPasswordTitle = "Forgot password";
+  static const String forgotPasswordDescription =
+      "Don't worry sometimes people can forget too, enter your email and we will send you a password reset link.";
+  static const String forgotPasswordPlaceholder = "E-mail";
+  static const String forgotPasswordBtn = "Submit";
 }
