@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:single_store_ecommerce/components/signin_with.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/utils/constants/colors.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
