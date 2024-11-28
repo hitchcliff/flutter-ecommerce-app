@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import 'package:single_store_ecommerce/extensions/list_space_between.dart';
 import 'package:single_store_ecommerce/screens/create_account.dart';
 import 'package:single_store_ecommerce/screens/forgot_password.dart';
+import 'package:single_store_ecommerce/screens/home.dart';
+import 'package:single_store_ecommerce/screens/navigation.dart';
 import 'package:single_store_ecommerce/utils/constants/sizes.dart';
 import 'package:single_store_ecommerce/utils/constants/text_strings.dart';
 
@@ -56,7 +58,9 @@ class LoginForm extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.to(() => const Navigation());
+              },
               child: const Text(MyTexts.loginSignIn),
             ),
           ),
